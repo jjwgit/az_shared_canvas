@@ -1,6 +1,8 @@
 let express = require('express');
 let app = express();
-let server = app.listen(8000, "localhost");
+let address = app.address;
+let port = process.env.PORT || 8000;
+let server = app.listen(port, address);
 let io = require('socket.io')(server);
 
 

@@ -4,7 +4,7 @@ function setup() {
     createCanvas(640, 640);
     background(51);
 
-    socket = io.connect("localhost:8000");
+    socket = io.connect("https://shared-canvas-12047.herokuapp.com/");
     socket.on('mouse', newDrawing);
 }
 
