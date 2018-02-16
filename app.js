@@ -5,7 +5,7 @@ let io = require('socket.io')(server);
 
 
 
-app.use("/",express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 io.sockets.on('connection',
 
